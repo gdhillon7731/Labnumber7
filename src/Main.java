@@ -22,7 +22,7 @@ public class Main {
             try {
                 System.out.println("Please enter a student number to learn more (1-20):");
                 studentNumber = scan.nextInt();
-                scan.nextLine(); //clear out everytime
+                scan.nextLine();
                 System.out.println("Your student is " + className[studentNumber - 1]);
 
                 do {
@@ -31,8 +31,10 @@ public class Main {
 
                     if (userWants.contains("school")) {
                         System.out.println("Your student attended " + highSchool[studentNumber - 1] + "high school");
+                        break;
                     } else if (userWants.contains("color")) {
                         System.out.println("Your student's favorite color is " + favColor[studentNumber - 1]);
+                        break;
                     } else {
                         System.out.println("Error! You did not 'high school' or 'favorite color'. Would you like to continue (y/n)");
                         again = scan.nextLine();
